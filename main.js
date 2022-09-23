@@ -2,7 +2,7 @@ const d = document
 const $form = d.getElementById('form')
 const $input = d.getElementById('input')
 const $container = d.getElementById('container')
-const $msgError = d.querySelector('.msgError')
+const $small = d.getElementsByTagName('small')[0]
 
 const miApi = async (pokemon) => {
     const baseURL = `https://pokeapi.co/api/v2/pokemon/`
@@ -18,24 +18,28 @@ const saveLs = (pokemonList) => {
 }
 const searchPokemon = async e => {
     e.preventDefault();
+
     let saveInput =  $input.value;
     $input.value = '';
 
     const fetchedPokemon = await miApi(saveInput);
 
-    if(!fetchedPokemon){
-        $msgError.textContent = `No existe el Pokemon ingresado`
+    if(!fetchedPokemon.id){
+        $small.textContent = 'No existe un Pokemon con ese número'
     return;
 }
-    if(!saveInput){
-        $msgError.textContent =`Esta vacio. Por favor ingresa un valor`
-    return;
+    else if(!saveInput.length){
+        $small.textContent ='Esta vacio. Por favor ingresa un valor'
+        $form.reset();
+        return;
 } 
     else if (pokemones.some(pokemon => pokemon.id === fetchedPokemon.id)){
-        $msgError.textContent =`Ya estas viendo el Pokemon ingresado`
-    return;
+        $small.textContent ='Ya estas viendo el Pokemon ingresado'
+        saveInput('');
+        return;
 }
     pokemones = [fetchedPokemon, ...pokemones];
+    $small.textContent = '';
     renderCard(pokemones);
     saveLs(pokemones);
     $form.reset();

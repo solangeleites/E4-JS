@@ -6,6 +6,9 @@
     align-items: center;
     gap: 15px;
 }
+body{
+    background: url(./img/bg.jpg) no-repeat center/cover;
+}
 h1{
     font-size: 50px;
     font-weight:900;
@@ -45,7 +48,7 @@ font-weight: 500;
     align-items: center;
     background: rgba(128, 128, 128, 0.279);
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
 }
 .pokemonCard:hover{
@@ -53,8 +56,8 @@ font-weight: 500;
     transition: all 0.5s ease-out;
 }
 .pokemonImg{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     margin: 0 auto;
     border-bottom: 2px solid black;
     padding: 20px 0px;
