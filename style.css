@@ -149,8 +149,8 @@ font-weight: 500;
     font-size: 20px;
 }
 .stats{
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 500;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -217,7 +217,7 @@ small{
         border: 1px solid rgba(0, 0, 0, 0.709);
     }
     .container__end_third{
-        height: 200px;
+        height: 250px;
         overflow: hidden;
     }
 }
