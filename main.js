@@ -131,7 +131,7 @@ const createHtml = pokemon => {
             </div>
             <div class="container__end_second">
             <p class = "description_tittle tittle">${abilities[0].ability.name}</p>
-            <p class = "description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos, delectus!</p>
+            <p class = "description"> Lorem ipsum dolor sit, amet consectetur adipisicing elit!</p>
             </div>
             <div class="container__end_third">
             <p class = "base_stats tittle">Base Stats</p>
