@@ -142,7 +142,7 @@ font-weight: 500;
     justify-content: center;
     align-items: center;
     width: 330px;
-    gap: 10px;
+    gap: 5px;
 }
 .tittle{
     font-weight: 900;
@@ -189,6 +189,14 @@ small{
     border-radius: 5px;
 }
 @media(max-width: 576px){
+    .section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
     #container{
         display: flex;
         flex-direction: row;
@@ -206,6 +214,10 @@ small{
         height: 330px;
         width: 326px;
         padding: 20px 0px;
-        border: 1px solid black;
+        border: 1px solid rgba(0, 0, 0, 0.709);
+    }
+    .container__end_third{
+        height: 200px;
+        overflow: hidden;
     }
 }
