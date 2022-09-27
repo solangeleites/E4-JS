@@ -217,7 +217,7 @@ small{
         border: 1px solid rgba(0, 0, 0, 0.709);
     }
     .container__end_third{
-        height: 280px;
+        height: 320px;
         overflow: hidden;
     }
 }
