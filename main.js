@@ -44,6 +44,7 @@ let pokemones = [];
 // const saveLs = (pokemonList) => {
 //     localStorage.setItem('pokemones', JSON.stringify(pokemonList))
 // }
+
 const searchPokemon = async e => {
     e.preventDefault();
 
@@ -80,9 +81,25 @@ const deletePokemon = e => {
     pokemones = pokemones.filter(pokemon => pokemon.id !== filterId);
     renderCard(pokemones);
 }
+
 const renderCard = pokemonList => {
     $container.innerHTML = pokemonList.map (pokemon => createHtml(pokemon)).join('');
 }
+
+$img.addEventListener('change', cambiarDisplay());
+function cambiarDisplay(){
+    setTimeout(function(){
+        $img.style.display = "none";
+    }, 2000);
+}
+
+// $small.addEventListener('change', dejarDeMostrarError());
+// function dejarDeMostrarError(){
+//     setTimeout(function(){
+//         $small.style.display = 'none';
+//     }, 2000);
+// }
+
 const setCardBg = type => {
     const color = colorBg[type[0].types[0].type.name];
     $container.style.backgroundColor = `${color}`;
@@ -101,9 +118,9 @@ const createHtml = pokemon => {
             </div>
 
             <div class="container__img">
-            <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-left" data-id="${pokemon}"></i>
             <img src="${imgPokemon}" alt="${name}" class= "pokemon-img" />
-            <i class="fa-solid fa-angle-right"></i>
+            <i class="fa-solid fa-angle-right" data-id="${pokemon}"></i>
             </div>
 
             <div class="container__end">
