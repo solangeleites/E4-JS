@@ -93,12 +93,7 @@ function cambiarDisplay(){
     }, 2000);
 }
 
-// $small.addEventListener('change', dejarDeMostrarError());
-// function dejarDeMostrarError(){
-//     setTimeout(function(){
-//         $small.style.display = 'none';
-//     }, 2000);
-// }
+
 
 const setCardBg = type => {
     const color = colorBg[type[0].types[0].type.name];
@@ -144,6 +139,13 @@ const createHtml = pokemon => {
             </div>
             </div>
             </div>`
+}
+
+$small.addEventListener('change', dejarDeMostrarError());
+function dejarDeMostrarError(){
+    setTimeout(function(){
+        $small.style.display = 'none';
+    }, 2000);
 }
 const init = () =>{
     renderCard(pokemones);
