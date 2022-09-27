@@ -208,14 +208,13 @@ small{
         border-radius: 10px;
     }
     .pokemonCard{
-        height: 560px;
+        height: 540px;
         width: 340px;
     }
     .container__end{
-        height: 330px;
+        height: 300px;
         width: 326px;
         padding: 20px 0px;
-        border: 1px solid rgba(0, 0, 0, 0.709);
     }
     .container__end_third{
         height: 320px;
